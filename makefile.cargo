@@ -1,0 +1,36 @@
+ifneq ($(HOST),$(TARGET))
+  CXX ?= $(TARGET)-g++
+  CC ?= $(TARGET)-gcc
+  AR ?= $(TARGET)-ar
+else
+  CXX ?= g++
+  CC ?= gcc
+  AR ?= ar
+endif
+
+FLAGS = -fPIC
+
+ifeq ($(DEBUG),true)
+  FLAGS += -g
+else
+  FLAGS += -O2
+endif
+
+CFLAGS += $(FLAGS)
+CXXFLAGS += $(FLAGS)
+
+CONFIGURE_FLAGS = \
+	--prefix=$(OUT_DIR)/prefix \
+	--host=$(TARGET) \
+	--enable-static
+
+# ICU uses the $TARGET environment variable to mean something else
+TARGET=
+
+all:
+	cd $(OUT_DIR) && $(CARGO_MANIFEST_DIR)/icu/source/configure $(CONFIGURE_FLAGS) \
+		CFLAGS="$(CFLAGS)" CXXFLAGS="$(CXXFLAGS)"
+	make -j$(NUM_JOBS) -C $(OUT_DIR) all
+	make -C $(OUT_DIR) install
+
+.PHONY: all

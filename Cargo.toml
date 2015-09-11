@@ -1,0 +1,18 @@
+[package]
+name = "icu-sys"
+version = "0.1.0"
+
+authors = ["The Servo Project Developers"]
+license = "MIT / Apache-2.0"
+
+description = "Rust bindings to ICU (International Components for Unicode)"
+keywords = ["i18n", "unicode", "globalization", "libicu", "bidi"]
+
+links = "icu"
+build = "build.rs"
+
+[dependencies]
+libc = "0.1"
+
+[build-dependencies]
+pkg-config = "0.3"
