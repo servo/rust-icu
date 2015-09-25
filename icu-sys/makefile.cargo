@@ -28,7 +28,7 @@ CONFIGURE_FLAGS = \
 TARGET=
 
 all:
-	cd $(OUT_DIR) && $(CARGO_MANIFEST_DIR)/../icu/source/configure $(CONFIGURE_FLAGS) \
+	cd $(OUT_DIR) && $(CARGO_MANIFEST_DIR)/icu/source/configure $(CONFIGURE_FLAGS) \
 		CFLAGS="$(CFLAGS)" CXXFLAGS="$(CXXFLAGS)"
 	make -j$(NUM_JOBS) -C $(OUT_DIR) all
 	make -C $(OUT_DIR) install
