@@ -5,6 +5,9 @@ version = "0.1.0"
 authors = ["The Servo Project Developers"]
 license = "MIT / Apache-2.0"
 
+repository = "https://github.com/servo/rust-icu"
+documentation = "http://doc.servo.org/icu_sys/"
+
 description = "Rust bindings to ICU (International Components for Unicode)"
 keywords = ["i18n", "unicode", "globalization", "libicu", "bidi"]
 
