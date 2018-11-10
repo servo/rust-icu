@@ -6,7 +6,7 @@ authors = ["The Servo Project Developers"]
 license = "ICU License"
 
 repository = "https://github.com/servo/rust-icu"
-documentation = "http://doc.servo.org/icu_sys/"
+documentation = "https://doc.servo.org/icu_sys/"
 
 description = "Rust bindings to ICU (International Components for Unicode)"
 keywords = ["i18n", "unicode", "globalization", "libicu", "bidi"]

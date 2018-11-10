@@ -1,6 +1,6 @@
 # rust-icu
 
-[Documentation](http://doc.servo.org/icu_sys/)
+[Documentation](https://doc.servo.org/icu_sys/)
 
 [![Build Status](https://travis-ci.org/servo/rust-icu.svg?branch=master)](https://travis-ci.org/servo/rust-icu)
 
