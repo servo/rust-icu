@@ -5,5 +5,3 @@ rust:
  - nightly
 script:
   cargo build --verbose --manifest-path=icu-sys/Cargo.toml
-notifications:
-  webhooks: http://build.servo.org:54856/travis
